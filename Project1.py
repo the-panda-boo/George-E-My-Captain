@@ -5,22 +5,30 @@ def question():
     global choice
     choice = input("\nEnter your choice (1/2) : ")
 def math():
-    print("Program to calculate area of a circle from the radius.")
+    print("\n\nProgram to calculate area of a circle from the radius.")
     global rad
-    rad = float(input("Input the radius of the circle : "))
-    print ("The area of the circle with radius "+str(rad)+" is: "+str(pi*rad**2) )
+    rad = float(input("\nInput the radius of the circle : "))
+    print ("The area of the circle with radius "+str(rad)+" is : "+str(pi*rad**2)+"\n\n")
 def ext():
-    print("Waiting")
+    print("Waiting")    
 question()
 check = "2"
 while (check == "2"):
-    question()
     if (choice == "1"):
         math()
+        again = input("Would you like to find the area of another circle?\nY/N : ")
+        while (again == "y" or again == "Y"):
+            math()
+            again = input("Would you like to find the area of another circle?\nY/N : ")
         check = "1"
     if(choice == "2"):
         ext()
+        again = input("Would you like to find the extention of another file?\nY/N : ")
+        while (again == "y" or again == "Y"):
+            ext()
+            again = input("Would you like to find the extention of another file?\nY/N : ")
         check = "1"
     if(choice != "1" and choice != "2"):
         print("Really!!!..... It's a Simple Choice between 1 and 2.... Lets try that again.\n Remember.... It's easy Just 1 or 2.")
+        question()
     
