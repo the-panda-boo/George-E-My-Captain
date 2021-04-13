@@ -16,19 +16,27 @@ check = "2"
 while (check == "2"):
     if (choice == "1"):
         math()
-        again = input("Would you like to find the area of another circle?\nY/N : ")
+        again = input("\nWould you like to find the area of another circle?\nY/N : ")
         while (again == "y" or again == "Y"):
             math()
-            again = input("Would you like to find the area of another circle?\nY/N : ")
+            again = input("\nWould you like to find the area of another circle?\nY/N : ")
         check = "1"
     if(choice == "2"):
         ext()
-        again = input("Would you like to find the extention of another file?\nY/N : ")
+        again = input("\nWould you like to find the extention of another file?\nY/N : ")
         while (again == "y" or again == "Y"):
             ext()
-            again = input("Would you like to find the extention of another file?\nY/N : ")
+            again = input("\nWould you like to find the extention of another file?\nY/N : ")
         check = "1"
     if(choice != "1" and choice != "2"):
-        print("Really!!!..... It's a Simple Choice between 1 and 2.... Lets try that again.\n Remember.... It's easy Just 1 or 2.")
+        print("\n\nReally!!!..... It's a Simple Choice between 1 and 2.... Lets try that again.\n Remember.... It's easy Just 1 or 2.\n")
         question()
-    
+    if(check == "1"):
+        restart = input("\n\nWould you like to try the other program?\nY/N : ")
+        if(restart == "Y"or restart == "y"):
+            check = "2"
+            if(choice == "1"):
+                choice = "2"
+            else:
+                choice = "1"
+print("\n\n\nThank you!!\n\n")
