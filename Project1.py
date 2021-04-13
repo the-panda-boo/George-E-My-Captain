@@ -10,7 +10,11 @@ def math():
     rad = float(input("\nInput the radius of the circle : "))
     print ("The area of the circle with radius "+str(rad)+" is : "+str(pi*rad**2)+"\n\n")
 def ext():
-    print("Waiting")    
+    global name
+    global ex
+    name = input("Enter Filename: ")
+    ex = name.split(".")
+    print ("Extension of the file is : " + ex[-1])  
 question()
 check = "2"
 while (check == "2"):
