@@ -12,9 +12,9 @@ def math():
 def ext():
     global name
     global ex
-    name = input("Enter Filename: ")
+    name = input("\n\nEnter Filename: ")
     ex = name.split(".")
-    print ("Extension of the file is : " + ex[-1])  
+    print ("Extension of the file is : " + ex[-1]+"\n\n")  
 question()
 check = "2"
 while (check == "2"):
@@ -33,7 +33,7 @@ while (check == "2"):
             again = input("\nWould you like to find the extention of another file?\nY/N : ")
         check = "1"
     if(choice != "1" and choice != "2"):
-        print("\n\nReally!!!..... It's a Simple Choice between 1 and 2.... Lets try that again.\n Remember.... It's easy Just 1 or 2.\n")
+        print("\n\nReally!!!..... \nIt's not that hard....\nIt's a Simple Choice between 1 and 2.... Lets try that again.\n Remember.... It's easy Just 1 or 2.\n")
         question()
     if(check == "1"):
         restart = input("\n\nWould you like to try the other program?\nY/N : ")
